@@ -1,0 +1,24 @@
+<div *ngIf="budget" class="p-6 rounded-lg shadow-xl">
+    <h2 class="text-2xl font-bold mb-4">Budget Overview</h2>
+
+    <div class="grid md:grid-cols-2 gap-4">
+        <div>
+            <canvas id="budgetPieChart" width="full" height="64"></canvas>
+        </div>
+
+        <div class="grid gap-4">
+            <div class="p-4 bg-green-100 rounded-lg">
+                <h3>Income</h3>
+                <p [appCurrencyFormat]="budget.income"></p>
+            </div>
+            <div class="p-4 bg-red-100 rounded-lg">
+                <h3>Expenses</h3>
+                <p [appCurrencyFormat]="budget.expenses"></p>
+            </div>
+            <div class="p-4 bg-yellow-100 rounded-lg">
+                <h3>Balance</h3>
+                <p [appCurrencyFormat]="budget.balance"></p>
+            </div>
+        </div>
+    </div>
+</div>
