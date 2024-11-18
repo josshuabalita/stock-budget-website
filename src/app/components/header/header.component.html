@@ -10,13 +10,13 @@
         <span>Welcome, User!</span>
         <img src="assets/user.png" alt="User Image" class="w-10 h-10 rounded-full border-2 border-black">
 
-        <div *ngIf="showDropdown" class="absolute top-full right-0 mt-4 w-48 border border-gray rounded-md shadow-lg">
+        <div *ngIf="showDropdown" class="absolute top-full right-0 mt-2 w-48 border border-gray-300 rounded-md shadow-lg bg-white z-50">
             <ul class="py-1">
                 <li>
-                    <a class="block px-4 py-2">Settings</a>
+                    <a class="block px-4 py-2 hover:bg-gray-100">Settings</a>
                 </li>
                 <li>
-                    <a class="block px-4 py-2">Log Out</a>
+                    <a class="block px-4 py-2 hover:bg-gray-100">Log Out</a>
                 </li>
             </ul>
         </div>
