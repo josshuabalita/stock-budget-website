@@ -1,0 +1,145 @@
+<div class="p-6 rounded-lg shadow-xl">
+    <h2 class="text-2xl font-bold mb-4">Stock Market Status</h2>
+  
+    <div class="grid md:grid-cols-2 gap-4">
+      <!-- Stock Card -->
+      <div
+        *ngFor="let quote of stockQuotes"
+        class="p-4 rounded-lg shadow bg-gray-50 border border-gray-200 transition-all duration-300 hover:border-transparent hover:ring-2 hover:ring-green-400 hover:bg-gradient-to-br hover:from-green-50 hover:to-green-100"
+      >
+        <!-- Stock Symbol -->
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="text-lg font-bold text-gray-800">{{ quote.symbol }}</h3>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-6 h-6 text-green-500"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M3 10h18M9 21V10M15 21v-6"
+            />
+          </svg>
+        </div>
+  
+        <!-- Stock Data -->
+        <div class="grid gap-2 text-sm">
+          <!-- Current Price -->
+          <div class="flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-4 h-4 text-blue-500"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 4v16m8-8H4"
+                />
+              </svg>
+              <span class="font-semibold text-gray-700">Current Price:</span>
+            </div>
+            <span class="text-gray-900">${{ quote.data.c }}</span>
+          </div>
+  
+          <!-- Change -->
+          <div class="flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-4 h-4 text-red-500"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 12h16M8 16v-8m8 8V8"
+                />
+              </svg>
+              <span class="font-semibold text-gray-700">Change:</span>
+            </div>
+            <span class="text-gray-900">${{ quote.data.d }}</span>
+          </div>
+  
+          <!-- Percent Change -->
+          <div class="flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-4 h-4 text-yellow-500"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 12h16M8 16v-8m8 8V8"
+                />
+              </svg>
+              <span class="font-semibold text-gray-700">Percent Change:</span>
+            </div>
+            <span class="text-gray-900">{{ quote.data.dp }}%</span>
+          </div>
+  
+          <!-- High -->
+          <div class="flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-4 h-4 text-green-500"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 12h16M8 16v-8m8 8V8"
+                />
+              </svg>
+              <span class="font-semibold text-gray-700">High:</span>
+            </div>
+            <span class="text-gray-900">${{ quote.data.h }}</span>
+          </div>
+  
+          <!-- Low -->
+          <div class="flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-4 h-4 text-gray-500"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 12h16M8 16v-8m8 8V8"
+                />
+              </svg>
+              <span class="font-semibold text-gray-700">Low:</span>
+            </div>
+            <span class="text-gray-900">${{ quote.data.l }}</span>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  
