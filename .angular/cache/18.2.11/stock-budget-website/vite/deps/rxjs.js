@@ -16,7 +16,9 @@ import {
   SequenceError,
   Subject,
   Subscriber,
+  Subscription,
   TimeoutError,
+  UnsubscriptionError,
   VirtualAction,
   VirtualTimeScheduler,
   animationFrame,
@@ -170,12 +172,7 @@ import {
   zip,
   zipAll,
   zipWith
-} from "./chunk-BUYB5YTS.js";
-import {
-  Subscription,
-  UnsubscriptionError
-} from "./chunk-6DGCXGHC.js";
-import "./chunk-HM5YLMWO.js";
+} from "./chunk-ZSY7TSMJ.js";
 import "./chunk-3OV72XIM.js";
 export {
   ArgumentOutOfRangeError,
